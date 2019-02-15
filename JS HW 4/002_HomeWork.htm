@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+
+
+        var arr = [];
+        var num1 = +prompt('Введите число 1:');
+        var num2 = +prompt('Введите число 2:');
+        var num3 = +prompt('Введите число 3:');
+        arr = arr.concat(num1, num2, num3);
+
+
+
+            function Calculate(arr) {
+                var sum = 0;
+                for (var i = 0; i < arr.length; i++) {
+                    sum += arr[i];
+                }
+                var result = sum / arr.length;
+                document.write(result);
+            }
+
+            Calculate(arr);
+
+
+        var num1 = +prompt('Введите число:');
+
+            function a(num1){
+                if(num1>0)
+                document.write('положительное' + "<br />");
+
+            else if(num1<0){
+                document.write('отрицательное' + "<br />");
+            }
+          else{
+            document.write('число равно 0' + "<br />");
+          }
+
+          flag = false;
+            for (var i = 2; i < num1; i++) {
+                if (num1 % i != 0)
+                    flag = false;
+                else {
+                    flag = true;
+                    document.write("Число не простое");
+                    break;
+                }
+            }
+            if (flag == false)
+                document.write("Число простое")
+            }
+        a(num1);
+
+
+        function b(num1) {
+
+            if (num1 % 2 == 0 && num1 % 3 == 0 && num1 % 6 == 0 && num1 % 9 == 0 && num1 % 5 == 0)
+            document.write('Делится на данное число');
+            
+            else{
+                document.write('не делится на данное число');
+            }
+        }
+        b(num1);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
