@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+
+
+
+
+        function Sum(num) {
+            var a = +prompt('Число 1');
+            var b = +prompt('Число 2');
+            
+            if (num == "+")
+               { var result = a + b;
+                alert("result: " + result);}
+            else if (num == "-")
+                {var result = a - b;
+                alert("result: " + result);}
+                else if (num == "*")
+                {var result = a * b;
+                alert("result: " + result);}
+                else
+               { if(a!=0&&b!=0)  
+               { var result = a / b;
+                alert("result: " + result);}
+               
+                else 
+                {alert("на 0 не делится");}
+                
+            }
+
+           
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <input type="button" id="b1" value="+" onclick="Sum(value)">
+    <input type="button" id="b2" value="-" onclick="Sum(value)">
+    <input type="button" id="b3" value="*" onclick="Sum(value)">
+    <input type="button" id="b4" value="/" onclick="Sum(value)">
+</body>
+
+</html>

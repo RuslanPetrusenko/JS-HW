@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+var num=prompt('input numberOfPeopl');
+var num1=prompt('input country');
+var num2=prompt('input numberOfDays'); 
+
+
+        function weekends(numberOfPeople, country, numberOfDays) {
+            var amountPerDay;
+            var totalSum = 0;
+            
+            if (numberOfPeople < 1) {
+                document.write('нельзя взять путевку на 0 человек');
+                return
+            }
+            else {
+                switch (country) {
+                    case 'Turkey': {
+                        amountPerDay = 100;
+                        break;
+                    }
+                
+              
+                    case 'Egypt': {
+                        amountPerDay = 120;
+                        break;
+                    }
+                
+               
+                    case 'Bolgary': {
+                        amountPerDay = 75;
+                        break;
+                    }
+                    default: {
+                        alert('наше агенство не поддерживает путевки в эту страну' +  country);
+                        return;
+
+                    }
+                }
+                if (numberOfDays == undefined) {
+                    numberOfDays = 7;
+                }
+
+                if (numberOfDays < 5) {
+                    alert('нельзя взять путевку меньше чем на 5 дней');
+                    return;
+                }
+                totalSum = (numberOfDays>10) ? numberOfDays*amountPerDay*numberOfPeople*0.9 :numberOfDays*amountPerDay*numberOfPeople;
+                alert('Путевка найдена, сумма: ' + totalSum);
+                }
+                }
+
+                weekends(num,num1,num2);
+            
+        
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
