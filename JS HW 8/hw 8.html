@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script type="text/javascript">
+        
+        function Drink(name, degree) {
+            this.name = name;
+            this.degree = degree;
+            this.display = function () { document.write("Name=" + this.name + "<br />" + "degree=" + this.degree +"alcohole="+this.alcohole+ " ") }
+        }
+
+        Drink.prototype.alcohole="yes";
+
+        function Premium_drink(name, degree) {
+            Drink.call(this,name,degree);
+            this.price = "100$";
+            //this.display=function(){ document.write("Name=" + this.name + "<br />" + "degree=" + this.degree +"Price"+this.price)}
+            }
+        function Simply_drink(name, degree) {
+            Drink.call(this,name,degree);
+            this.price = "50$";
+        }
+       
+
+Premium_drink.prototype =Object.create(Drink.prototype);
+Simply_drink.prototype =Object.create(Drink.prototype);
+
+
+        Jack_Daniels = new Premium_drink("Jack_Daniels", 49);
+        Nemiroff = new Simply_drink("Nemiroff", 40);
+
+        Jack_Daniels.display();
+        document.write("Price= " + Jack_Daniels.price + "<br />");
+        Nemiroff.display();
+        document.write("Price= " + Nemiroff.price + "<br />");
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
