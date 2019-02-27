@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+
+
+var count =0;
+
+function resetcolor(){
+
+    var res=document.getElementsByTagName('p');
+    if(res.length==10)
+    {
+        for(var i=0;i<res.length;i++)
+        res[i].style.background='red';
+    }
+    else{
+
+    }
+for(var i=0;i<res.length;i++)
+res[i].style.background='red';
+}
+
+
+function ChangeColor() {
+    count++;
+    if(count ==1){
+        
+        var One = document.getElementById('One');
+        One.style.background = 'green';
+        
+    }
+
+    else if(count ==2){
+       resetcolor();
+       One = document.getElementById('Two');
+       One.style.background = 'green';
+    }
+
+    else if(count ==3){
+       resetcolor();
+       One = document.getElementById('Three');
+       One.style.background = 'green';
+    }
+    else if(count ==4){
+       resetcolor();
+       One = document.getElementById('Four');
+       One.style.background = 'green';
+    }
+    else if(count ==5){
+       resetcolor();
+       One = document.getElementById('Five');
+       One.style.background = 'green';
+
+    }
+
+    else {
+       resetcolor();
+       count =0;
+    }
+}
+
+    </script>
+
+
+
+</head>
+
+<body>
+<p>
+    <div id="One" style='height:100px; width:100px; background: red;'></div><br>
+    <div id="Two" style='height:100px; width:100px; background: red;  '></div><br>
+    <div id="Three" style='height:100px; width:100px; background: red;     '></div><br>
+    <div id="Four" style='height:100px; width:100px; background: red  '></div><br>
+    <div id="Five" style='height:100px; width:100px; background: red  '></div><br>
+</p>
+    <input type="button" value="change color" onclick="ChangeColor()" />
+</body>
+
+</html>
